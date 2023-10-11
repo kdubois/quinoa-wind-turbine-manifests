@@ -43,6 +43,10 @@ spec:
               name: infinispan-generated-secret
         image: quay.io/kevindubois/quinoa-wind-turbine:1.0.0
         imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 300m
+            memory: 300Mi
         name: quinoa-wind-turbine
         ports:
         - containerPort: 8080
